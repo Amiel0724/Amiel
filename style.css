@@ -1,0 +1,225 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f15a29;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://static.vecteezy.com/system/resources/thumbnails/025/480/733/small_2x/vegetables-set-and-spices-for-cooking-on-dark-background-ai-generated-free-photo.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 4em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+/* Menu Section */
+/* Menu Section */
+.menu {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.menu h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    margin: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.menu-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.price {
+    display: block;
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #f15a29;
+}
+
+
+/* Employees Profile Section */
+.employees {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.employees h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.employee-profiles {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.employee {
+    width: 250px;
+    text-align: center;
+    margin: 10px;
+}
+
+.employee img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.employee img:hover {
+    transform: scale(1.1);
+}
+
+/* Reserve a Seat Section */
+.reserve {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.reserve h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.reserve form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.reserve input, .reserve button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.reserve button {
+    background-color: #f15a29;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.reserve button:hover {
+    background-color: #d94d20;
+}
+
+/* More Info Section */
+.more-info {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.more-info h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.more-info p {
+    font-size: 1.2em;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
