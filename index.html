@@ -3,154 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Login Form</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0;
-        }
-
-        .container {
-            background: #fff;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            width: 100%;
-            max-width: 400px;
-            animation: fadeIn 1s ease-in-out;
-        }
-
-        h2 {
-            margin-bottom: 20px;
-            color: #333;
-            font-size: 28px;
-            font-weight: 600;
-        }
-
-        .input-group {
-            position: relative;
-            margin-bottom: 20px;
-        }
-
-        input {
-            width: 100%;
-            padding: 12px 15px;
-            border-radius: 50px;
-            border: 1px solid #ddd;
-            font-size: 16px;
-            outline: none;
-            transition: all 0.3s ease;
-        }
-
-        input:focus {
-            border-color: #667eea;
-            box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
-        }
-
-        .error {
-            color: red;
-            font-size: 14px;
-            margin-top: -10px;
-            margin-bottom: 15px;
-            display: none;
-        }
-
-        .btn {
-            width: 100%;
-            padding: 12px;
-            border: none;
-            border-radius: 50px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            font-size: 18px;
-            cursor: pointer;
-            transition: 0.3s;
-            font-weight: 600;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
-        }
-    </style>
+    <meta name="description" content="Welcome to our restaurant and bar. Enjoy exquisite meals and drinks in a relaxing atmosphere.">
+    <title>Brew and Bite - Restaurant & Bar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <h2>Login</h2>
-        <form id="loginForm" onsubmit="return validateForm()">
-            <div class="input-group">
-                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-            </div>
-            <div class="input-group">
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
-            </div>
-            <p id="errorMessage" class="error"></p>
-            <p id="countdown" class="error"></p>
-            <button type="submit" class="btn" id="loginButton">Login</button>
-        </form>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#employees">Employees Profile</a></li>
+                <li><a href="#reserve">Reserve a Seat</a></li>
+                <li><a href="#more-info">More Info</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Brew and Bite</h1>
+            <p>Delicious meals and handcrafted drinks in a cozy atmosphere</p>
+        </div>
+    </section>
+
+  <!-- Menu Section -->
+<section id="menu" class="menu">
+    <h2>Some of our Menu</h2>
+    <div class="menu-items">
+        <div class="menu-item">
+            <img src=https://images.ctfassets.net/7t85a6f8wt2m/6TQqPOYKHTJXlG3zn7H16E/1c57135b8868d0861c49e544d804e2a8/Ultimate_Party_Bread_03__1_.jpg?fm=webp&q=75&w=800&h=600&fit=fill alt="Party Cheese Bread">
+            <h3>Party Cheese Bread</h3>
+
+            
+            <p>You can't go wrong with this cheese bread recipe. The cheesy, butter bread is so simple to make but the taste is sinful. Plus it looks fantastic, and people just flock to it! It's better than the usual garlic bread with pasta, too.</p>
+            <span class="price">₱250.00</span>
+        </div>
+        <div class="menu-item">
+            <img src=https://assets.epicurious.com/photos/5f737a125a7e264184aab1b4/1:1/w_1920%2Cc_limit/ChickenGrapesFennel_HEROv2_12175.jpg alt="Braised Chicken Legs With Grapes and Fennel">
+            <h3>Braised Chicken Legs With Grapes and Fennel</h3>
+            <p>There's nothing wrong with defaulting to chicken when you're trying to think of dinner party ideas. The key is to select a truly special chicken recipe, like this easy sweet-and-spicy braise, made with ribbons of fennel and juicy table grapes. You'll want to have a loaf of bread on the side for sopping up the sauce.</p>
+            <span class="price">₱675.00</span>
+        </div>
+        <div class="menu-item">
+            <img src=https://www.southernliving.com/thmb/cI6d6MnpfD46bsC695dXZsP_YOA=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Mahogany_-cake_009-9fadbbc87ddf4081879a2db83142c3a1.jpg alt="Mahogany Cake">
+            <h3>Mahogany Cake</h3>
+            <p>If you’re a red velvet fan, you have to try the original. This chocolate cake is true old-fashioned baking at its best, and every baker should make the fluffy, cooked Ermine Frosting at least once.</p>
+            <span class="price">₱450.00</span>
+        </div>
     </div>
+</section>
 
-    <script>
-        let loginAttemptInProgress = false;
 
-        function validateForm() {
-            if (loginAttemptInProgress) {
-                return false;
-            }
+    <!-- Employees Profile Section -->
+    <section id="employees" class="employees">
+        <h2>Meet Our Team</h2>
+        <div class="employee-profiles">
+            <div class="employee">
+                <img src="C:\Delos Reyes\download (1).jpg" alt="Joshua Pajares">
+                <h3>Joshua Pajares</h3>
+                <p>Head Chef – Creating delicious dishes for over 20 years!</p>
+            </div>
+            <div class="employee">
+                <img src="C:\Delos Reyes\download (2).jpg" alt="Harryson Corpuz">
+                <h3>Harryson Corpuz</h3>
+                <p>Bar Manager – Crafting the best cocktails in town!</p>
+            </div>
+            <div class="employee">
+                <img src="C:\Delos Reyes\download.jpg" alt="Joseph Taunan">
+                <h3>Joseph Taunan</h3>
+                <p>Server – Ensuring every guest has a fantastic experience.</p>
+            </div>
+        </div>
+    </section>
 
-            var name = document.getElementById('name');
-            var password = document.getElementById('password');
-            var errorMessage = document.getElementById('errorMessage');
-            var countdownMessage = document.getElementById('countdown');
-            var loginButton = document.getElementById('loginButton');
-            
-            errorMessage.style.display = 'none';
-            countdownMessage.style.display = 'none';
-            errorMessage.textContent = '';
-            countdownMessage.textContent = '';
-            
-            var correctName = "admin123";
-            var correctPassword = "admin123";
-            
-            if (name.value !== correctName || password.value !== correctPassword) {
-                errorMessage.textContent = "Invalid name or password! Please wait 10 seconds before trying again.";
-                errorMessage.style.display = 'block';
-                loginAttemptInProgress = true;
-                loginButton.disabled = true;
-                name.disabled = true;
-                password.disabled = true;
-                
-                let countdown = 10;
-                countdownMessage.style.display = 'block';
-                countdownMessage.textContent = `Retry in ${countdown} seconds...`;
-                
-                let interval = setInterval(() => {
-                    countdown--;
-                    countdownMessage.textContent = `Retry in ${countdown} seconds...`;
-                    if (countdown <= 0) {
-                        clearInterval(interval);
-                        loginAttemptInProgress = false;
-                        loginButton.disabled = false;
-                        name.disabled = false;
-                        password.disabled = false;
-                        errorMessage.style.display = 'none';
-                        countdownMessage.style.display = 'none';
-                    }
-                }, 1000);
-                return false;
-            }
-            
-            alert('Login successful! Redirecting...');
-            window.location.href = "index.html";
-            return false;
-        }
-    </script>
+    <!-- Reserve a Seat Section -->
+    <section id="reserve" class="reserve">
+        <h2>Reserve Your Seat</h2>
+        <form id="reservation-form" action="#" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="date">Reservation Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Reservation Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="party-size">Party Size:</label>
+            <input type="number" id="party-size" name="party-size" min="1" max="10" required>
+
+            <button type="submit">Reserve Now</button>
+        </form>
+    </section>
+
+    <!-- More Info Section -->
+    <section id="more-info" class="more-info">
+        <h2>More Information</h2>
+        <p><strong>Hours of Operation:</strong><br>
+        Monday to Friday: 11:00 AM - 10:00 PM<br>
+        Saturday & Sunday: 10:00 AM - 11:00 PM</p>
+
+        <p><strong>Location:</strong><br>
+        Bagong Sikat, San Jose, Occidental Mindoro</p>
+
+        <p><strong>Restaurant Policies:</strong><br>
+        - We welcome guests of all ages. Children must be accompanied by an adult.<br>
+        - Reservations are recommended, especially on weekends.<br>
+        - We have a strict no-smoking policy inside the restaurant.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Brew and Bite. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
